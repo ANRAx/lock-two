@@ -1,10 +1,7 @@
 import React from 'react';
-
-const lockCombo = ["1", "2", "3", "4"];
+const lockCombo = ["12", "24", "36", "48"];
 const success = "Success! You've opened lock number 1!";
 const failure = "Please try again!";
-
-
 
 class Card extends React.Component {
     constructor(props) {
@@ -50,7 +47,7 @@ class Card extends React.Component {
         }
 
         const checkValues = (value) => {
-            if (value !== "") {
+            if (value !== "" && this.state.posOne === "12" && this.state.posTwo === "24" && this.state.posThree === "36" && this.state.posFour === "48") {
                 return true
             } else {
                 return false
@@ -83,10 +80,11 @@ class Card extends React.Component {
                 </div>
                 <br></br>
                 <form>
-                    <input type="text" maxLength="1" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="1" onChange={this.handleInputChange}></input>
-                    <input type="text" maxLength="1" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="2" onChange={this.handleInputChange}></input>
-                    <input type="text" maxLength="1" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="3" onChange={this.handleInputChange}></input>
-                    <input type="text" maxLength="1" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="4" onChange={this.handleInputChange}></input>
+                    <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="1" onChange={this.handleInputChange}></input>
+                    <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="2" onChange={this.handleInputChange}></input>
+                    <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="3" onChange={this.handleInputChange}></input>
+                    <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="4" onChange={this.handleInputChange}></input>
+                    <button variant="secondary" type="submit" onClick={(e) => this.handleInputChange(e)}>Submit</button>
                 </form>
             </div>
         );
