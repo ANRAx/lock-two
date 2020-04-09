@@ -9,13 +9,13 @@ import 'tachyons';
 
 ReactDOM.render(
   <div>
-    <div className="tc">
+    <div>
       <Header />
     </div>
     <div className="tc pt7">
       <Card />
     </div>
-    <div className="tc">
+    <div>
       <Footer />
     </div>
   </div>

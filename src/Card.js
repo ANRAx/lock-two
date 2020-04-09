@@ -47,7 +47,7 @@ class Card extends React.Component {
         }
 
         const checkValues = (value) => {
-            if (value !== "" && this.state.posOne === "12" && this.state.posTwo === "24" && this.state.posThree === "36" && this.state.posFour === "48") {
+            if (value !== "" && Object.values(this.state) === lockCombo) {        
                 return true
             } else {
                 return false
@@ -76,16 +76,19 @@ class Card extends React.Component {
                     <span className="bg-light-green dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posTwo}</span>
                     <span className="bg-light-green dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posThree}</span>
                     <span className="bg-light-green dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posFour}</span>
-
                 </div>
-                <br></br>
+                <br/>
                 <form>
                     <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="1" onChange={this.handleInputChange}></input>
                     <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="2" onChange={this.handleInputChange}></input>
                     <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="3" onChange={this.handleInputChange}></input>
                     <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="4" onChange={this.handleInputChange}></input>
-                    <button variant="secondary" type="submit" onClick={(e) => this.handleInputChange(e)}>Submit</button>
                 </form>
+                <br/>
+                <br/>
+                <div>
+                    <button className="bg-light-green dib br3 pa3 ma2 bw1 shadow-5 spin-button" variant="secondary" type="submit" onClick={(e) => this.handleInputChange(e)}>Unlock</button>
+                </div>
             </div>
         );
     }
