@@ -35,7 +35,7 @@ class Footer extends React.Component {
                     </div>
                     {/* bg-light-purple fixed left-0 bottom-0 right-0 */}
                 </footer>  
-                <h6 className="tc pr3 footertext bottom-0">&copy;Nebula Academy</h6>
+                <h6 className="tc pr3 footertext bottom-0 top-0">&copy;Nebula Academy</h6>
             </div>      
         );
     }

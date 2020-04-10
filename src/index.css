@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color:#393e46; */
-  background-image: url("assets/beanstalk-dark.png");
+  background-image: url("assets/double-bubble.png");
 }
 
 a {
@@ -57,7 +57,7 @@ footer{
 
 .footertext {
   color: white;
-  margin-top: 280px;
+  margin-top: 380px;
   position: relative;
   /* width: 500px;
   height: 200px;

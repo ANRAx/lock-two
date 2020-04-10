@@ -17,6 +17,7 @@ class Card extends React.Component {
 
     checkAnswer = () => {
         const lockInputArr = Object.values(this.state);
+        
         for (let i = 0; i < lockInputArr.length; i++) {
             if (lockInputArr[i] !== lockCombo[i]) {
                 alert(failure);
@@ -57,10 +58,7 @@ class Card extends React.Component {
         //         return false
         //     }
         // }
-
-        // this returns an array of the values in this.state
         
-
         // if (lockInputArr.every()) {
             // const isCombinationCorrect = this.checkAnswer(lockInputArr, lockCombo);
             // if (isCombinationCorrect === true) {
@@ -76,17 +74,17 @@ class Card extends React.Component {
         return (
             <div>
                 <div>
-                    <span className="bg-light-green dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posOne}</span>
-                    <span className="bg-light-green dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posTwo}</span>
-                    <span className="bg-light-green dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posThree}</span>
-                    <span className="bg-light-green dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posFour}</span>
+                    <span className="bg-gold dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posOne}</span>
+                    <span className="bg-gold dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posTwo}</span>
+                    <span className="bg-gold dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posThree}</span>
+                    <span className="bg-gold dib br3 pa3 ma2 grow bw4 shadow-5">{this.state.posFour}</span>
                 </div>
                 <br/>
                 <form>
-                    <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="1" onChange={this.handleInputChange}></input>
-                    <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="2" onChange={this.handleInputChange}></input>
-                    <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="3" onChange={this.handleInputChange}></input>
-                    <input type="text" maxLength="2" className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5" id="4" onChange={this.handleInputChange}></input>
+                    <input type="text" maxLength="2" className="bg-gold dib br3 pa3 ma2 grow bw2 shadow-5" id="1" onChange={this.handleInputChange}></input>
+                    <input type="text" maxLength="2" className="bg-gold dib br3 pa3 ma2 grow bw2 shadow-5" id="2" onChange={this.handleInputChange}></input>
+                    <input type="text" maxLength="2" className="bg-gold dib br3 pa3 ma2 grow bw2 shadow-5" id="3" onChange={this.handleInputChange}></input>
+                    <input type="text" maxLength="2" className="bg-gold dib br3 pa3 ma2 grow bw2 shadow-5" id="4" onChange={this.handleInputChange}></input>
                 </form>
                 <br/>
                 <br/>
