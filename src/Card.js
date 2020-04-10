@@ -1,4 +1,5 @@
 import React from 'react';
+
 const lockCombo = ["12", "24", "36", "48"];
 const success = "Success! You've opened lock number 1!";
 const failure = "Please try again!";
@@ -14,12 +15,15 @@ class Card extends React.Component {
         }
     }
 
-    checkAnswer = (lockInputArr, lockAnswerArr) => {
+    checkAnswer = () => {
+        const lockInputArr = Object.values(this.state);
         for (let i = 0; i < lockInputArr.length; i++) {
-            if (lockInputArr[i] !== lockAnswerArr[i]) {
+            if (lockInputArr[i] !== lockCombo[i]) {
+                alert(failure);
                 return false
             }
         }
+        alert(success);
         return true
     }
 
@@ -46,25 +50,25 @@ class Card extends React.Component {
             });
         }
 
-        const checkValues = (value) => {
-            if (value !== "" && Object.values(this.state) === lockCombo) {        
-                return true
-            } else {
-                return false
-            }
-        }
+        // const checkValues = (value) => {
+        //     if (value !== "") {        
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+        // }
 
         // this returns an array of the values in this.state
-        const lockInputArr = Object.values(this.state);
+        
 
-        if (lockInputArr.every(checkValues)) {
-            const isCombinationCorrect = this.checkAnswer(lockInputArr, lockCombo);
-            if (isCombinationCorrect === true) {
-                alert(success);
-            } else {
-                alert(failure);
-            }
-        }
+        // if (lockInputArr.every()) {
+            // const isCombinationCorrect = this.checkAnswer(lockInputArr, lockCombo);
+            // if (isCombinationCorrect === true) {
+            //     alert(success);
+            // } else {
+            //     alert(failure);
+            // }
+        // }
     }
 
     render() {
@@ -87,7 +91,7 @@ class Card extends React.Component {
                 <br/>
                 <br/>
                 <div>
-                    <button className="bg-light-green dib br3 pa3 ma2 bw1 shadow-5 spin-button" variant="secondary" type="submit" onClick={(e) => this.handleInputChange(e)}>Unlock</button>
+                    <button className="bg-light-green dib br3 pa3 ma2 bw1 shadow-5 spin-button" variant="secondary" type="submit" onClick={this.checkAnswer}>Unlock</button>
                 </div>
             </div>
         );
