@@ -5,7 +5,7 @@ class Header extends React.Component {
     render() {
         return(
             <div>
-                <header className="fixed w-100">
+                <header className="fixed w-100 shadow-3">
                     <Particles
                         height="95px"
                         params={{

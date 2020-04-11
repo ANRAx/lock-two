@@ -89,7 +89,7 @@ class Card extends React.Component {
                 <br/>
                 <br/>
                 <div>
-                    <button className="bg-light-green dib br3 pa3 ma2 bw1 shadow-5 spin-button" variant="secondary" type="submit" onClick={this.checkAnswer}>Unlock</button>
+                    <button className="bg-gold dib br3 pa3 ma2 bw1 shadow-5 spin-button" variant="secondary" type="submit" onClick={this.checkAnswer}>Unlock</button>
                 </div>
             </div>
         );
