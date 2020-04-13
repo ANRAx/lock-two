@@ -8,31 +8,39 @@ body {
   /* background-color:#393e46; */
   background-image: url("assets/double-bubble.png");
 }
+
 a {
   padding: 0px;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 input {
   width: 59px;
   outline: none;
 }
+
 header {
   background-color: #28094d;
 }
+
 footer{
   height: 60px;
 }
+
 .ficonrow {
   margin-top: 25px;
 }
+
 .ficon:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
-  color: #28094d;
+  color: gold;
 }
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -46,6 +54,7 @@ footer{
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
 .footertext {
   color: white;
   margin-top: 380px;
@@ -57,17 +66,23 @@ footer{
   margin-top: -100px; 
   margin-left: -250px;  */
 }
+
+
 .logo {
   height: 90px;
   position: fixed;
 }
+
 .spin-button {
   border-radius: 50%;
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
   outline: none;
 }
+
 .spin-button:active {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
+

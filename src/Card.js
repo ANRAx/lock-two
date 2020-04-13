@@ -50,23 +50,6 @@ class Card extends React.Component {
                 posFour: value
             });
         }
-
-        // const checkValues = (value) => {
-        //     if (value !== "") {        
-        //         return true
-        //     } else {
-        //         return false
-        //     }
-        // }
-        
-        // if (lockInputArr.every()) {
-            // const isCombinationCorrect = this.checkAnswer(lockInputArr, lockCombo);
-            // if (isCombinationCorrect === true) {
-            //     alert(success);
-            // } else {
-            //     alert(failure);
-            // }
-        // }
     }
 
     render() {
